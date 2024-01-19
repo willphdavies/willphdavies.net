@@ -5,7 +5,6 @@ import {
   ImageListItem,
   ImageListItemBar,
 } from "@mui/material";
-import { useWindowWidth } from "@/common/hooks/useWindowWidth";
 import Link from "next/link";
 import { IPhilosophyModel } from "@/data";
 
@@ -14,9 +13,7 @@ export interface PhilosophyGridProps {
 }
 export function PhilosophyGrid(props: PhilosophyGridProps) {
   const { items } = props;
-  const width = useWindowWidth();
-  const getRows = (tile: IPhilosophyModel) =>
-    width > 850 ? tile.rows || 1 : 1;
+  const getRows = (tile: IPhilosophyModel) => tile.rows;
   return (
     <div className="philosophy-grid">
       <ImageList>

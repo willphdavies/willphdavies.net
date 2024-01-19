@@ -5,16 +5,14 @@ import {
   ImageListItem,
   ImageListItemBar,
 } from "@mui/material";
-import { useWindowWidth } from "@/common/hooks/useWindowWidth";
 import { IInterestModel } from "@/data";
 export interface InterestsGridProps {
   items: IInterestModel[];
 }
 export function InterestsGrid(props: InterestsGridProps) {
   const { items } = props;
-  const width = useWindowWidth();
-  const getCols = (tile: IInterestModel) => (width > 850 ? tile.cols || 1 : 2);
-  const getRows = (item: IInterestModel) => (width > 850 ? item.rows || 1 : 1);
+  const getCols = (tile: IInterestModel) => tile.cols;
+  const getRows = (item: IInterestModel) => item.rows;
   return (
     <ImageList className={`interests-grid`}>
       {items.map((item) => (

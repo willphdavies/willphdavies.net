@@ -6,15 +6,13 @@ import {
   ImageListItemBar,
 } from "@mui/material";
 import { IProjectModel } from "@/data/entity";
-import { useWindowWidth } from "@/common/hooks/useWindowWidth";
 export interface ProjectGridProps {
   items: IProjectModel[];
 }
 export function ProjectsGrid(props: ProjectGridProps) {
   const { items } = props;
-  const width = useWindowWidth();
-  const getCols = (tile: IProjectModel) => (width > 850 ? tile.cols || 1 : 2);
-  const getRows = (tile: IProjectModel) => (width > 850 ? tile.rows || 1 : 1);
+  const getCols = (tile: IProjectModel) => tile.cols;
+  const getRows = (tile: IProjectModel) => tile.rows;
   return (
     <div className="projects-grid">
       <ImageList rowHeight={300} gap={15}>
