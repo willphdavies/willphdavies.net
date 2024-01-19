@@ -27,9 +27,10 @@ export default function Home() {
                 over {time} years and still enjoy building Web Applications as
                 much as I did when I started. Things move fast these days, and
                 even faster in tech. With developments such as AI, The Cloud and
-                so much more besides, it's sometimes difficult for companies to
-                keep up. My ultimate goal in all projects is to always find the
-                simplest solution.
+                so much more besides, it&apos;s sometimes difficult for
+                businesses to keep up. In this ever-changing landscape, my
+                ultimate goal in all projects is to always find the simplest
+                solution.
               </p>
             </article>
             <div>
