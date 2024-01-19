@@ -9,7 +9,7 @@ export default function PageProjects() {
           <h1>Qualifications</h1>
         </div>
       }
-      backgroundSrc="/qualifications.jpg"
+      backgroundSrc="/education.jpeg"
     >
       <Qualifications />
     </TemplatDefault>

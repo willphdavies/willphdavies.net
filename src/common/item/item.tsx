@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 interface ItemProps {
   title: string;
   subtitle: string;
-  extra: string;
+  extra?: string;
   description: ReactNode;
   image: string;
   link: string;

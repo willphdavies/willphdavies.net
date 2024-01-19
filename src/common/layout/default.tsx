@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
 import { Nav } from "..";
 import "./default.scss";
-import { Mast } from "../mast/mast";
+import { Mast } from "@/common/mast/mast";
+import { Footer } from "@/common/nav/footer";
 
 interface TemplatDefaultProps {
   children: ReactNode;
@@ -19,6 +20,7 @@ export function TemplatDefault(props: TemplatDefaultProps) {
         {mast}
       </Mast>
       <section>{children}</section>
+      <Footer />
     </main>
   );
 }
