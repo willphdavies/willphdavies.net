@@ -25,6 +25,11 @@ export function ExperienceGrid(props: ExperienceGridProps) {
               <ExperienceCard item={item} />
             </Grid>
           ))}
+          {[1, 2, 3].map((item, index) => (
+            <Grid item key={`filler-${index}`}>
+              <div style={{ height: "1px" }}></div>
+            </Grid>
+          ))}
         </Grid>
       ) : (
         <Empty name="Experiences" link="/experience" />

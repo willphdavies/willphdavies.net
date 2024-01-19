@@ -1,6 +1,6 @@
 import { IInterestModel } from "./entity";
 
-export const items: IInterestModel[] = [
+export const interestItems: IInterestModel[] = [
   {
     image: "speed-twin.avif",
     title: "Triumphant Road Trippin'",

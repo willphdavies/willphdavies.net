@@ -1,0 +1,33 @@
+.view-qualifications {
+  max-width: 1140px;
+  margin: 15px auto;
+  img {
+    max-width: 100%;
+  }
+
+  .accordion-details {
+    flex-wrap: wrap;
+
+    .accordion-details__text {
+      flex: 1;
+      min-width: 300px;
+    }
+  }
+
+  h5,
+  p {
+    padding: 10px;
+    svg {
+      position: relative;
+      top: 5px;
+    }
+  }
+  a {
+    text-decoration: underline;
+  }
+  h5 {
+    a {
+      text-decoration: none;
+    }
+  }
+}

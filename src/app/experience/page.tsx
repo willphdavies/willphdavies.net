@@ -1,14 +1,11 @@
-import { useState } from "react";
-import { experienceItems } from "@/data";
 import { TemplatDefault } from "@/common";
-import { uniq } from "lodash";
 import { Experiences } from "@/common/experiences";
 
 /**
  * Experience View Component
  * @returns Wrapper for Experience sub-components (Grid and Filter)
  */
-export default function Experience() {
+export default function PageExperience() {
   return (
     <TemplatDefault
       mast={
