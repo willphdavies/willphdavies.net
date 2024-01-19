@@ -15,12 +15,13 @@ export function ProjectsGrid(props: ProjectGridProps) {
   const getRows = (tile: IProjectModel) => tile.rows;
   return (
     <div className="projects-grid">
-      <ImageList rowHeight={300} gap={15}>
+      <ImageList rowHeight={400} gap={15}>
         {items.map((tile) => (
           <ImageListItem
+            className="projects-grid__item"
             key={tile.image}
-            cols={getCols(tile)}
-            rows={getRows(tile)}
+            cols={2}
+            rows={1}
           >
             <img src={`/${tile.image}`} alt={tile.title} loading="lazy" />
             <a

@@ -15,10 +15,10 @@ export function Experiences() {
   return (
     <div className={`${showFilter ? "-filter" : "-no-filter"} view-experience`}>
       <ExperienceGrid items={experienceItems} />
-      <ExperienceFilter
+      {/*<ExperienceFilter
         onToggleVisibility={(val: boolean) => setShowFilter(val)}
         tags={getTags()}
-      />
+  />*/}
     </div>
   );
   function getTags() {
