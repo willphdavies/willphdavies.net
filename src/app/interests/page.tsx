@@ -1,6 +1,12 @@
+"use client";
 import { TemplatDefault } from "@/common";
-import { Experiences } from "@/common/experiences";
-import { Interests } from "@/common/interests";
+import dynamic from "next/dynamic";
+const Interests = dynamic(
+  () => {
+    return import("@/common/interests");
+  },
+  { ssr: false }
+);
 
 export default function PageInterests() {
   return (

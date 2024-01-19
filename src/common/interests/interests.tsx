@@ -9,3 +9,4 @@ export function Interests() {
     </div>
   );
 }
+export default Interests;
