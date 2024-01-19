@@ -1,0 +1,29 @@
+.common-item {
+  margin: 15px auto;
+  width: 400px;
+  max-width: 100%;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  .common-item__container {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
+      rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+    border: 1px solid transparent;
+    &:hover {
+      border: 1px solid blue;
+    }
+    .container__header {
+      padding: 15px;
+    }
+    .container__img {
+      min-height: 300px;
+      width: 400px;
+      max-width: 100%;
+      background-size: cover;
+    }
+    .container__description {
+      padding: 15px 15px 24px 15px;
+      height: 80px;
+    }
+  }
+}

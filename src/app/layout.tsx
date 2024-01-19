@@ -2,10 +2,10 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { Inter } from "next/font/google";
 import { DM_Sans } from "next/font/google";
 import "material-icons/iconfont/material-icons.css";
-import "./global.scss";
-import "./typography.scss";
-import "./form.scss";
-import "./utils.scss";
+import "@/app/global.scss";
+import "@/app/typography.scss";
+import "@/app/form.scss";
+import "@/app/utils.scss";
 const inter = Inter({ subsets: ["latin"] });
 const font = DM_Sans({
   weight: ["400", "700"],
@@ -14,10 +14,10 @@ const font = DM_Sans({
   display: "swap",
 });
 export const metadata = {
-  title: "William Davies - Cloud Applications",
+  title: "William Davies - Javascript Cloud Applications",
   description: "Elevating Ideas to the Cloud",
 };
-
+console.log("hehheheh");
 export default function RootLayout({
   children,
 }: {

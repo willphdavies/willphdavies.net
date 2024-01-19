@@ -20,7 +20,7 @@ export function NavMobile() {
                 <Image src="/logo.png" height={30} width={30} alt="Logo" />
               </div>
               <h3>William Davies</h3>
-              <h4>Cloud Specialist</h4>
+              <h4>Cloud Applications</h4>
             </div>
             <ul className="main-nav-mobile-aside__items">
               <NavItems />

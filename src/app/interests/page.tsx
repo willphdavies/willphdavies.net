@@ -1,3 +1,3 @@
-export function Interests() {
+export default function Interests() {
   return <div>Interests</div>;
 }
