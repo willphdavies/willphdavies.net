@@ -18,6 +18,7 @@ import {
 } from "@mui/material";
 import { ChangeEvent, useEffect, useState } from "react";
 import { ExperienceFilterSearch } from "./experience.filter.search";
+import { useSearchParams, useRouter } from "next/navigation";
 
 export interface ExperienceFilterProps {
   tags: string[];
@@ -33,8 +34,10 @@ export function ExperienceFilter(props: ExperienceFilterProps) {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState<string>("start");
   const [sortAsc, setSortAsc] = useState<boolean>(false);
-  const [showFilter, setShowFilter] = useState(true);
-  const badgeCount = 0; //filterCount();
+  const [showFilter, setShowFilter] = useState(false);
+  const qsParams = useSearchParams();
+  const router = useRouter();
+  const badgeCount = filterCount();
 
   useEffect(() => {
     onToggleVisibility(showFilter);
@@ -105,23 +108,33 @@ export function ExperienceFilter(props: ExperienceFilterProps) {
   );
   function handleTagFilterChange(tags: string[]) {
     setSelectedTags(tags);
-    //setQsParams({ tags, page: "1" });
+    const newSearchParams = new URLSearchParams();
+    newSearchParams.set("tags", tags.join(","));
+    newSearchParams.set("page", "1");
+    router.push(`/experience?${newSearchParams.toString()}`);
   }
   function handleSortByChange(ev: SelectChangeEvent) {
     const sortBy = ev.target.value;
-    const sortAsc = ["company", "role"].indexOf(sortBy) >= 0 ? "true" : "false";
-    //setQsParams({ sortBy, sortAsc });
+    setSortBy(sortBy);
+    const newSearchParams = new URLSearchParams(qsParams);
+    newSearchParams.set("sortBy", sortBy);
+    newSearchParams.set(
+      "sortAsc",
+      ["company", "role"].indexOf(sortBy) >= 0 ? "true" : "false"
+    );
+    router.push(`/experience?${newSearchParams.toString()}`);
   }
   function handleSortAscChange(ev: ChangeEvent<HTMLInputElement>) {
     const sortAsc = String(ev.target.checked);
-    //setQsParams({ sortAsc });
+    const newSearchParams = new URLSearchParams(qsParams);
+    newSearchParams.set("sortAsc", sortAsc);
+    router.push(`/experience?${newSearchParams.toString()}`);
   }
-  /*
   function filterCount() {
-    let count = qsParams.search ? 1 : 0;
-    count = qsParams?.tags?.length ? count + 1 : count;
-    count = qsParams?.sortBy ? count + 1 : count;
-    count = qsParams?.sortAsc ? count + 1 : count;
+    let count = qsParams.get("search") ? 1 : 0;
+    count = qsParams.get("tags")?.length ? count + 1 : count;
+    count = qsParams.get("sortBy") ? count + 1 : count;
+    count = qsParams.get("sortAsc") ? count + 1 : count;
     return count;
-  }*/
+  }
 }

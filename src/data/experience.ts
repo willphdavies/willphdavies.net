@@ -5,14 +5,17 @@ export const experienceItems: IExperienceModel[] = [
     company: "Cigna / Evernorth",
     role: "Senior / Lead Software Engineer",
     description: `Lead for a Multi Branded Developer Portal 
-3 separate brands from the same codebase
-* Okta User / API Authentication with roles and permissions
-* AWS Lambda endpoints based in NodeJS / Typescript / NestJS / Postgres
-* React/Typescript frontend served via S3 / Cloudfront
-* Infrastructure as code - Terraform / Gitlab / Jenkins CI/CD.
-* Leading a team of 4 devs + 3 SDETs
-* Establishing reusable architecture / coding patterns / documentation / mentoring
-* Performance optimization`,
+Lead for a Multi Branded Developer Portal 
+* Consolidated 3 separate branded developer portals into 1 single codebase
+* Implemented Multi Factor Authentication using Okta Identity Engine
+* Simplified Internal/External API Authentication onboarding to enable developers to easily, yet securely, access health data - reducing lead times from weeks to minutes
+* Improved developer time to production by moving backend to AWS Lambdas with NodeJS / Typescript framework backed by AWS hosted Postgres DB 
+* Established frontend patterns in React/Typescript significantly improving UI/UX and greatly improving reusability of code to allow for faster development
+* Improved deploy pipelines using Terraform, Gitlab, Github and Jenkins to reduce deploy time and increase infrastructure reliability
+* Lead a team of 4 devs + 3 SDETs, mentoring junior developers and contributing to product development
+* Optimized performance on the frontend using local caching (Redux Toolkit)
+* Optimized performance on the backend by consolidating endpoints into AWS Lambda - 20s -> 1s load times
+`,
     image: "cigna.png",
     link: "https://www.cigna.com/",
     start: new Date(2021, 11, 13),
@@ -40,9 +43,12 @@ export const experienceItems: IExperienceModel[] = [
     company: "Lytics",
     role: "Senior Javascript Developer",
     description: `AI based Customer Data Platform - data analytics / targeted advertising
-* Ember frontend refactor to React / Typescript
-* REST API - GoLang
-* Google Cloud CI/CD`,
+* Modernized Ember frontend to React leveraging caching to increase performance and MUI UI library to improve UX
+* Implemented a modular approach to modernization using separate routes to deploy newly modernized parts of the application via Google Cloud 
+* Implemented sitewide accessibility standards in < 1 month to win a contact with the Canadian Govt
+* Identified performance issues in the GoLang REST API
+* Administered Google Cloud CI/CD
+`,
     image: "lytics.jpeg",
     start: new Date(2021, 4, 1),
     end: new Date(2021, 11, 3),
@@ -66,11 +72,11 @@ export const experienceItems: IExperienceModel[] = [
     company: "Smarsh",
     role: "Lead / Senior Javascript Developer",
     description: `Multi tenant archiving platform - 
-* Modernize old JQuery/Razr frontend to SPA with VueJS/Typescript 
-* Migrate codebase to AWS
-* Implement CI/CD pipeline to leverage AWS cloud using Travis
-* Add / improve Groups / Roles and Permissions handling
-* Redesign .Net API to follow REST standards`,
+* Improved UI/UX by modernizing stack to a single page app from older RAZR based framework
+* Separated frontend and backend development using mock data to allow frontend and backend features to be worked on independently
+* Improved the CI/CD deploy pipeline using Travis and deploying to AWS S3 / Cloudfront
+* Improved backend API structure to follow REST Standards resulting in predictable patterns and easier development
+`,
     link: "https://www.smarsh.com",
     image: "smarsh.png",
     start: new Date(2018, 1, 1),

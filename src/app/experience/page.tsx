@@ -1,10 +1,9 @@
 "use client";
-import { ExperienceGrid } from "./experience.grid";
-import "./experience.scss";
-import { ExperienceFilter } from "./experience.filter";
 import { useState } from "react";
 import { experienceItems } from "@/data";
 import { TemplatDefault } from "@/common";
+import { uniq } from "lodash";
+import Experiences from "@/common/experiences/experience";
 
 /**
  * Experience View Component
@@ -13,16 +12,23 @@ import { TemplatDefault } from "@/common";
 export default function Experience() {
   const [showFilter, setShowFilter] = useState(true);
   return (
-    <TemplatDefault mast={null} backgroundSrc="/experience.jpeg">
-      <div
-        className={`${showFilter ? "-filter" : "-no-filter"} view-experience`}
-      >
-        <ExperienceGrid items={experienceItems} />
-        <ExperienceFilter
-          onToggleVisibility={(val: boolean) => setShowFilter(val)}
-          tags={[]}
-        />
-      </div>
+    <TemplatDefault
+      mast={
+        <div>
+          <h1>Professional Experience</h1>
+        </div>
+      }
+      backgroundSrc="/experience.jpeg"
+    >
+      <Experiences />
     </TemplatDefault>
   );
+  function getTags() {
+    return uniq(
+      experienceItems
+        .map((item) => item.tags)
+        .flat()
+        .sort()
+    );
+  }
 }

@@ -56,7 +56,7 @@ export function ExperienceCard(props: ExperienceCardProps) {
           className="content__text"
           variant="body2"
           color="textSecondary"
-          component="p"
+          component="div"
         >
           <Markdown>{item.description}</Markdown>
         </Typography>
@@ -80,7 +80,7 @@ export function ExperienceCard(props: ExperienceCardProps) {
             {showMore ? (
               <span className="material-icons">expand_less</span>
             ) : (
-              <span className="material-icons">expamd_less</span>
+              <span className="material-icons">expand_more</span>
             )}
           </IconButton>
         </div>

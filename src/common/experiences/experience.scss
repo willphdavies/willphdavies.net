@@ -46,6 +46,11 @@ $HeaderHeight: 64px;
             .content__text {
               flex: 1;
               padding-bottom: 15px;
+              ul {
+                list-style: disc;
+                margin-left: 5px;
+                padding-left: 5px;
+              }
             }
             .content__tags {
               display: flex;
