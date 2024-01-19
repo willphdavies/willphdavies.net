@@ -29,7 +29,7 @@ export const menuItems: IMenuModel[] = [
   {
     icon: "build",
     title: "Projects",
-    link: "/projects",
+    link: "/project",
     subtitle: "Things I've done...",
     description:
       "A showcase for some of my work, from Admin applications, to maps and much much more...",

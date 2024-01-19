@@ -1,0 +1,33 @@
+.view-projects {
+  margin-top: 15px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: row !important;
+  .projects-grid {
+    height: 100%;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    > ul {
+      overflow: hidden;
+      li {
+        overflow: hidden;
+      }
+    }
+    .grid__item {
+      margin: 0 auto 0;
+      width: 100%;
+      max-width: 800px;
+      display: inline-block;
+      flex: 1;
+    }
+    .projects-grid__pagination {
+      width: 100%;
+      margin-bottom: 50px;
+      nav {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

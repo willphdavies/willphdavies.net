@@ -10,7 +10,7 @@ import { uniq } from "lodash";
  * Experience View Component
  * @returns Wrapper for Experience sub-components (Grid and Filter)
  */
-export default function Experiences() {
+export function Experiences() {
   const [showFilter, setShowFilter] = useState(true);
   return (
     <div className={`${showFilter ? "-filter" : "-no-filter"} view-experience`}>

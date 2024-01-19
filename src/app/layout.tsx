@@ -17,7 +17,6 @@ export const metadata = {
   title: "William Davies - Javascript Cloud Applications",
   description: "Elevating Ideas to the Cloud",
 };
-console.log("hehheheh");
 export default function RootLayout({
   children,
 }: {
