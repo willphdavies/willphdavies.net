@@ -9,6 +9,12 @@
       margin: 0 15px;
     }
   }
+  .footer__strap {
+    display: none;
+    @media (min-width: 770px) {
+      display: block;
+    }
+  }
   .footer__copy {
   }
 }

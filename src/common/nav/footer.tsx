@@ -6,7 +6,9 @@ export function Footer() {
     <footer className="footer">
       <div className="footer__copy">&copy; {year} - All rights reserved</div>
       <div className="-spacer" />
-      <div>William Davies Javascript Cloud Applications</div>
+      <div className="footer__strap">
+        William Davies Javascript Cloud Applications
+      </div>
       <div className="-spacer" />
       <div className="footer__links">
         <a href="https://www.linkedin.com/in/willphdavies/" title="LinkedIn">
