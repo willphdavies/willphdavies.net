@@ -1,3 +1,4 @@
+"use client";
 import { PhilosophyGrid } from "./philosophy.grid";
 import "./philosophy.scss";
 import { philosophyItems } from "@/data";
