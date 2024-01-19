@@ -4,5 +4,29 @@
     display: flex;
     flex: 1;
     flex-wrap: wrap;
+    .content__about {
+      width: 100%;
+      justify-content: center;
+      margin: 25px 0;
+      padding: 25px 0;
+      text-align: center;
+      article {
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+        line-height: 1.5em;
+      }
+      .material-icons {
+        font-size: 40px;
+        font-style: italic;
+        transform: rotate(180deg);
+      }
+    }
+    .empty-item {
+      width: 100%;
+      max-width: 400px;
+      height: 1px;
+      margin: 15px auto;
+    }
   }
 }
